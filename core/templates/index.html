@@ -10,5 +10,26 @@
     <h2>You're in the Index</h2>
 
     <h2>{{ course }} using {{ language }}</h2>
+
+    <h2>{{ logged }}</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td><a href="{% url 'product' product.pk %}">{{ product.name }}</a></td>
+                    <td>{{ product.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        
+    
 </body>
 </html>
