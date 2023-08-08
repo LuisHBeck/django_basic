@@ -3,6 +3,8 @@
 *.pyc
 db.sqlite3
 
+.ideia
+
 *.bak
 
 .venv

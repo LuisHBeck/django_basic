@@ -9,33 +9,35 @@
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
 </head>
 <body>
-    <h1>Hello Word!</h1>
-    <h2>You're in the Index</h2>
-
-    <img src="{% static 'images\Django-Logo.png' %}" alt="">
-
-    <h2>{{ course }} using {{ language }}</h2>
-
-    <h2>{{ logged }}</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for product in products %}
+    <center>
+        <h1>Hello Word!</h1>
+        <h2>You're in the Index</h2>
+    
+        <img src="{% static 'images\Django-Logo.png' %}" alt="">
+    
+        <h2>{{ course }} using {{ language }}</h2>
+    
+        <h2>{{ logged }}</h2>
+    
+        <table>
+            <thead>
                 <tr>
-                    <td><a href="{% url 'product' product.pk %}">{{ product.name }}</a></td>
-                    <td>{{ product.price }}</td>
+                    <th>Product</th>
+                    <th>Price</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    <button onclick="test()">Click Here</button>    
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        <td><a href="{% url 'product' product.pk %}">{{ product.name }}</a></td>
+                        <td>{{ product.price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <button onclick="test()">Click Here</button>
+    </center>    
     
     <script src="{% static 'js\main.js' %}"></script>
 </body>
