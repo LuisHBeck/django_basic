@@ -1,13 +1,18 @@
+{% load static %} 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Core Index</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
 </head>
 <body>
     <h1>Hello Word!</h1>
     <h2>You're in the Index</h2>
+
+    <img src="{% static 'images\Django-Logo.png' %}" alt="">
 
     <h2>{{ course }} using {{ language }}</h2>
 
@@ -29,7 +34,9 @@
             {% endfor %}
         </tbody>
     </table>
-        
+
+    <button onclick="test()">Click Here</button>    
     
+    <script src="{% static 'js\main.js' %}"></script>
 </body>
 </html>
