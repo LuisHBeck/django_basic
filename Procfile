@@ -1,0 +1,1 @@
+web: gunicorn project.wsg1 --log-file -
